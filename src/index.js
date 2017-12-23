@@ -16,6 +16,7 @@ import easterA from './images/easter-a.png';
 import easterB from './images/easter-b.png';
 
 const initialState = {
+  isAnimated: false,
   menu: 
   [
     {
@@ -25,10 +26,6 @@ const initialState = {
     {
       href: '#guitarras',
       title: 'Guitarras',
-    },
-    {
-      href: 'precios.html',
-      title: 'Precios',
     }
   ],
   logoPortada: {
@@ -73,12 +70,7 @@ function reducer(state, action) {
 const store = createStore(reducer, initialState);
 
 const easter = {
-  menu: [
-    {
-      href: 'index.html',
-      title: 'Home',
-    },
-  ],
+  isAnimated: 'is-animated',
   guitarras : [
     {
       image: easterA,
