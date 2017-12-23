@@ -13,7 +13,7 @@ function mapStateToProps(state) {
 class Portada extends Component {
   render() {
     return (
-      <section id="portada" className="portada background">
+      <section id="portada" className={this.props.isAnimated && `portada background ${this.props.isAnimated}` || 'portada background'}>
         <header id="header" className="header contenedor">
             <figure className="logotipo">
                 <img src={this.props.logo.src} width="186" height="60" alt={this.props.logo.alt} />
