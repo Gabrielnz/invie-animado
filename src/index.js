@@ -7,6 +7,7 @@ import Invie from './Invie';
 import registerServiceWorker from './registerServiceWorker';
 import cheet from 'cheet.js';
 import logoPortada from './images/invie.png';
+import logoPlatzi from './images/platzi.png';
 import acustica from './images/invie-acustica.png';
 import clasica from './images/invie-classic.png';
 import { Provider } from 'react-redux';
@@ -71,6 +72,11 @@ const store = createStore(reducer, initialState);
 
 const easter = {
   isAnimated: 'is-animated',
+  menu: [],
+  logoPortada: {
+    src: logoPlatzi,
+    alt: 'Platzi logotipo'
+  },
   guitarras : [
     {
       image: easterA,
