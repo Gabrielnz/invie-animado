@@ -30,18 +30,24 @@ class Guitarras extends Component {
                     alt={guitarra.alt}
                   />
                 </CSSTransitionGroup>
-                <div className="contenedor-guitarra">
-                    <h3 className="guitarra-name">{guitarra.name}</h3>
-                    <ol>
-                      {
-                        guitarra.features.map((feature, index) => {
-                          return (
-                            <li key={index}>{feature}</li>
-                          )
-                        })
-                      }
-                    </ol>
-                </div>
+                <CSSTransitionGroup
+                  transitionName="fade"
+                  transitionEnterTimeout={300}
+                  transitionLeave={false}
+                >
+                  <div className="contenedor-guitarra" key={guitarra.name}>
+                      <h3 className="guitarra-name">{guitarra.name}</h3>
+                      <ol>
+                        {
+                          guitarra.features.map((feature, index) => {
+                            return (
+                              <li key={index}>{feature}</li>
+                            )
+                          })
+                        }
+                      </ol>
+                  </div>
+                </CSSTransitionGroup>
               </article>
             )
           })
